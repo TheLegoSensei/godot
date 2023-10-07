@@ -6,6 +6,8 @@
 	<description>
 		A TileSet is a library of tiles for a [TileMap]. It contains a list of tiles, each consisting of a sprite and optional collision shapes.
 		Tiles are referenced by a unique integer ID.
+		The bitmask value is the sum of the values in [enum AutotileBindings] present in the subtile (e.g. a value of 5 means the bitmask has bindings in both the top left and top right).
+		To decipher the bitmask, check if the value equals or is above 256, if it is, the bottom-right bit is "true". subtract 256 from the total and check 128. continue this until your counter hits zero.
 	</description>
 	<tutorials>
 		<link title="Using Tilemaps">$DOCS_URL/tutorials/2d/using_tilemaps.html</link>
